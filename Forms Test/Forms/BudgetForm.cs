@@ -34,6 +34,15 @@ namespace Forms_Test.Forms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBoxItemDescription.Text) ||
+                string.IsNullOrEmpty(textBoxCost.Text) ||
+                string.IsNullOrEmpty(textBoxItemName.Text)
+                )
+            {
+                MessageBox.Show("Invalid details entered");
+                return;
+            }
+
             BudgetItems.Add(new BudgetItem() { AddedOn = DateTime.Now, 
                 ItemCost = Convert.ToDouble(textBoxCost.Text), 
                 ItemDescription = textBoxItemDescription.Text, 
