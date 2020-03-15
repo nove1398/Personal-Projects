@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Preggers_Jam.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,26 @@ namespace Preggers_Jam
         public Form1()
         {
             InitializeComponent();
-            ControlBox = false;
-            Text = String.Empty;
+           
+            
         }
 
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            MainMenuForm form = new MainMenuForm();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }
