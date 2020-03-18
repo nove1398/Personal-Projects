@@ -16,7 +16,7 @@ namespace Preggers_Jam.Forms
         private bool isRightPanelDragged = false;
         private bool isLeftPanelDragged = false;
         private bool IsFormBeingDragged = false;
-        private Point offset;
+        private Point Offset;
 
         public MainMenuForm()
         {
@@ -56,7 +56,10 @@ namespace Preggers_Jam.Forms
             base.WndProc(ref m);
         }
 
-
+        /*
+         * Form window controls for sizing
+         * 
+         */
 
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
@@ -92,6 +95,7 @@ namespace Preggers_Jam.Forms
                 {
                     Height = Height + e.Y;
                     isBottomPanelDragged = true;
+                    Refresh();
                 }
             
         }
@@ -125,6 +129,7 @@ namespace Preggers_Jam.Forms
                 else
                 {
                     this.Width = this.Width + e.X;
+                    Refresh();
                 }
             }
         }
@@ -140,9 +145,6 @@ namespace Preggers_Jam.Forms
                 if (e.Button == MouseButtons.Left)
                 {
                     isLeftPanelDragged = true;
-                    Point pointStartPosition = panelTopMenu.PointToScreen(new Point(e.X, Location.Y));
-                    offset = new Point();
-                    offset.X = Location.X - pointStartPosition.X;
                 }
                 else
                 {
@@ -162,11 +164,10 @@ namespace Preggers_Jam.Forms
                     }
                     else
                     {
-                        Point newPoint = panelTopMenu.PointToScreen(new Point(e.X, e.Y));
-                        //newPoint.Offset(offset);
-
+                        Point newPoint = panelTopMenu.PointToScreen(new Point(e.X, panelTopMenu.Top));
                         Location = newPoint;
                         Width = Width - e.X;
+                        Refresh();
                     }
                 }
         }
@@ -182,9 +183,9 @@ namespace Preggers_Jam.Forms
             {
                 IsFormBeingDragged = true;
                 Point pointStartPosition = this.PointToScreen(new Point(e.X, e.Y));
-                offset = new Point();
-                offset.X = this.Location.X - pointStartPosition.X;
-                offset.Y = this.Location.Y - pointStartPosition.Y;
+                Offset = new Point();
+                Offset.X = this.Location.X - pointStartPosition.X;
+                Offset.Y = this.Location.Y - pointStartPosition.Y;
             }
             else
             {
@@ -201,7 +202,7 @@ namespace Preggers_Jam.Forms
             if (IsFormBeingDragged)
             {
                 Point newPoint = panelTopMenu.PointToScreen(new Point(e.X, e.Y));
-                newPoint.Offset(offset);
+                newPoint.Offset(Offset);
                 Location = newPoint;             
             }
         }
@@ -210,6 +211,38 @@ namespace Preggers_Jam.Forms
         {
             IsFormBeingDragged = false;
 
+        }
+
+        private void OnFormLoad(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonBlogs_Click(object sender, EventArgs e)
+        {
+            Blogs blogPanel = new Blogs();
+            SwitchContents(blogPanel);
+        }
+
+        /*
+         * End sizing controls
+         * 
+         */
+
+        private void SwitchContents(Form newForm)
+        {
+            panelContainer.Controls.Clear();
+            newForm.FormBorderStyle = FormBorderStyle.None;
+            newForm.Dock = DockStyle.Fill;
+            newForm.TopLevel = false;
+            newForm.TopMost = true;
+            panelContainer.Controls.Add(newForm);
+            newForm.Show();
         }
     }
 }
