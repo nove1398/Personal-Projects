@@ -15,6 +15,7 @@
   <ItemGroup>
     <Folder Include="Forms\Alerts\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 
   <ItemGroup>

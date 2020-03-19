@@ -24,5 +24,7 @@ namespace Preggers_Jam.Models
         public bool IsApproved { get; set; }
 
         public double Votes { get; set; }
+
+        public bool IsFlagged { get; set; }
     }
 }

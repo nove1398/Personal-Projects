@@ -20,6 +20,8 @@ namespace Preggers_Jam.Models
         public int PostId { get; set; }
         public Post Post { get; set; }
 
+        public double Votes { get; set; }
 
+        public bool IsFlagged { get; set; }
     }
 }

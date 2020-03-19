@@ -225,7 +225,7 @@ namespace Preggers_Jam.Forms
 
         private void buttonBlogs_Click(object sender, EventArgs e)
         {
-            Blogs blogPanel = new Blogs();
+            Blogs blogPanel = new Blogs(panelContainer);
             SwitchContents(blogPanel);
         }
 
