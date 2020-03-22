@@ -1,0 +1,24 @@
+﻿@if (IsVisible)
+{
+    if (IsValid)
+    {
+        <div role="alert" class="alert alert-success">
+            <span class="font-weight-bold">@ChildContent </span>
+        </div>
+    }else{
+        <div role="alert" class="alert alert-danger">
+            <span class="font-weight-bold">@ChildContent </span>
+        </div>
+    }
+}
+
+@code {
+    [Parameter]
+    public bool IsVisible { get; set; }
+
+    [Parameter]
+    public bool IsValid { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

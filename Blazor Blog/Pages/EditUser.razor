@@ -1,0 +1,68 @@
+﻿@page "/edituser/{id}"
+@inject UserService Service
+<h3>Edit User</h3>
+
+<hr />
+@if (UserObj == null)
+{
+    <p>Loading...</p>
+    return;
+}
+
+<AlertComponent IsVisible="@IsVisibleAlert" IsValid="@IsValid">
+    <span>@AlertMessage</span>
+</AlertComponent>
+
+<EditForm Model="@UserObj" OnValidSubmit="UpdateUser">
+    <div class="col-md-8">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label class="control-label" for="FirstName">First Name</label>
+            <InputText @bind-Value="UserObj.FirstName" class="form-control" />
+            <ValidationMessage For="(()=> UserObj.FirstName)"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="FirstName">Last Name</label>
+            <InputText @bind-Value="UserObj.LastName" class="form-control" />
+            <ValidationMessage For="(()=> UserObj.LastName)"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="FirstName">Username</label>
+            <InputText @bind-Value="UserObj.Username" class="form-control" />
+            <ValidationMessage For="(()=> UserObj.Username)"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <a href="Users" class="btn btn-secondary">Back</a>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </div>
+</EditForm>
+
+
+
+
+@code {
+    private User UserObj = new User();
+    private bool IsValid = false;
+    private bool IsVisibleAlert = false;
+    private string AlertMessage { get; set; }
+
+    [Parameter]
+    public string Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        UserObj = await Task.Run(() => Service.GetUserById(Convert.ToInt32(Id)));
+
+    }
+
+    private async Task UpdateUser()
+    {
+        UserObj = await Service.UpdateUser(UserObj);
+        IsVisibleAlert = true;
+        IsValid = true;
+        AlertMessage = $"Successfully updated {UserObj.FirstName}";
+    }
+
+
+}
