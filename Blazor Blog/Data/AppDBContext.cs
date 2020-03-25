@@ -16,7 +16,7 @@ namespace Blazor_Blog.Data
             List<User> UserList = new List<User>();
             for (int i = 1; i < 100; i++)
             {
-                UserList.Add(new User() { UserId = i, Username = $"NameyNamey{1}", FirstName = $"john{i}", LastName = "doe", CreatedAt = DateTime.Now.AddDays(i * 2) });
+                UserList.Add(new User() { UserId = i, Username = $"NameyNamey{1}", FirstName = $"john{i}", LastName = "doe", CreatedAt = DateTime.Now.AddDays(i * 2), Active = true });
             }
             modelBuilder.Entity<User>(
                 entity => {

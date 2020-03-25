@@ -11,17 +11,20 @@ namespace Blazor_Blog.Data
         [Key]
         public int UserId { get; set; }
 
+        [Required]
+        [MinLength(5,ErrorMessage = "Username cannot be blank")]
         public string Username { get; set; }
 
         [Required]
-        [MinLength(5, ErrorMessage = "Invalid name entered")]
+        [MinLength(5, ErrorMessage = "Invalid first name entered")]
         public string FirstName { get; set; }
-
+        [Required]
+        [MinLength(5, ErrorMessage = "Invalid last name entered")]
         public string LastName { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
-       
+       public bool Active { get; set; }
        
     }
 }

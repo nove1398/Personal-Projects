@@ -52,8 +52,13 @@
 
     protected override async Task OnInitializedAsync()
     {
-        UserObj = await Task.Run(() => Service.GetUserById(Convert.ToInt32(Id)));
 
+
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        UserObj = await Task.Run(() => Service.GetUserById(Convert.ToInt32(Id)));
     }
 
     private async Task UpdateUser()

@@ -16,11 +16,11 @@
         <div class="form-group">
             <label class="control-label" for="FirstName">First Name</label>
             <InputText @bind-Value="UserObj.FirstName"  class="form-control" />
-            <ValidationMessage For="(()=> UserObj.FirstName)"></ValidationMessage>
+            <ValidationMessage For="(() => UserObj.FirstName)"></ValidationMessage>
         </div>
         <div class="form-group">
             <label class="control-label" for="FirstName">Last Name</label>
-            <InputText @bind-Value="UserObj.LastName" class="form-control"  @onkeyup="(e)=>OnKeyUp(e)"/>
+            <InputText @bind-Value="UserObj.LastName" class="form-control"  @oninput="(args) => OnKeyUp(args)" />
             <ValidationMessage For="(()=> UserObj.LastName)"></ValidationMessage>
         </div>
         <div class="form-group">
@@ -45,18 +45,18 @@
 
     private void OnFormValid()
     {
+
+
         Service.AddUser(UserObj);
         IsValid = true;
         IsVisible = true;
         Message = "User Added successfully";
     }
 
-
-    private void OnKeyUp(KeyboardEventArgs e )
+    
+    private void OnKeyUp(ChangeEventArgs args)
     {
-        if(!string.IsNullOrEmpty(UserObj.FirstName) &&
-            !string.IsNullOrEmpty(UserObj.LastName)  )
-            TempUsername = UserObj.FirstName.Substring(0, 1).ToUpper() + "." + UserObj.LastName.ToLower();
-
+        TempUsername = UserObj.FirstName.Substring(0,1).ToUpper()+"."+args.Value.ToString().ToLower().Replace(" ","_");
+        UserObj.Username = TempUsername;
     }
 }

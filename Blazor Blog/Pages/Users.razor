@@ -15,16 +15,20 @@
     return;
 }
 
-<a href="adduser" class="btn btn-outline-primary">
-    <span class="oi oi-plus"></span>Add New
-</a>
+<div>
+    <a href="adduser" class="btn btn-outline-primary">
+        <span class="oi oi-plus"></span>Add New
+    </a>
+
+</div>
+
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Joined</th>
                 <th>Name</th>
                 <th>Actions</th>
-            </tr>
+            </tr> 
         </thead>
         <tbody>
             @foreach (var forecast in UserList)
@@ -49,14 +53,17 @@
 
 @code {
     private List<User> UserList { get; set; }
+    private List<User> FullUserList { get; set; }
     private string AlertMessage { get; set; }
     public bool IsVisibleAlert { get; set; }
     public bool IsValid { get; set; }
 
+
+
     protected override async Task OnInitializedAsync()
     {
         var users = await Task.Run(() => Service.GetAllUsers());
-        UserList = users.ToList().OrderByDescending(x => x.CreatedAt).ToList();
+        FullUserList = UserList = users.ToList().OrderByDescending(x => x.CreatedAt).ToList();
     }
 
     private async Task OnRemoveUserAsync(MouseEventArgs e, User user)
@@ -77,5 +84,6 @@
 
 
     }
+
 
 }

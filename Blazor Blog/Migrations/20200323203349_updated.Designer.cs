@@ -4,14 +4,16 @@ using Blazor_Blog.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Blazor_Blog.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200323203349_updated")]
+    partial class updated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,8 +56,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 1,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 3, 25, 16, 6, 2, 513, DateTimeKind.Local).AddTicks(4766),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 3, 25, 15, 33, 48, 607, DateTimeKind.Local).AddTicks(4196),
                             FirstName = "john1",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -63,8 +65,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 2,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 3, 27, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3410),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 3, 27, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2699),
                             FirstName = "john2",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -72,8 +74,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 3,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 3, 29, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3446),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 3, 29, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2723),
                             FirstName = "john3",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -81,8 +83,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 4,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 3, 31, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3452),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 3, 31, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2729),
                             FirstName = "john4",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -90,8 +92,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 5,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 2, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3455),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 2, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2732),
                             FirstName = "john5",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -99,8 +101,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 6,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 4, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3461),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 4, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2738),
                             FirstName = "john6",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -108,8 +110,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 7,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 6, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3464),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 6, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2741),
                             FirstName = "john7",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -117,8 +119,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 8,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 8, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3467),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 8, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2747),
                             FirstName = "john8",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -126,8 +128,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 9,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 10, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3470),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 10, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2750),
                             FirstName = "john9",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -135,8 +137,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 10,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 12, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3516),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 12, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2756),
                             FirstName = "john10",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -144,8 +146,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 11,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 14, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3519),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 14, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2759),
                             FirstName = "john11",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -153,8 +155,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 12,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 16, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3522),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 16, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2762),
                             FirstName = "john12",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -162,8 +164,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 13,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 18, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3528),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 18, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2768),
                             FirstName = "john13",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -171,8 +173,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 14,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 20, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3531),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 20, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2771),
                             FirstName = "john14",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -180,8 +182,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 15,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 22, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3534),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 22, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2774),
                             FirstName = "john15",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -189,8 +191,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 16,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 24, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3537),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 24, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2777),
                             FirstName = "john16",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -198,8 +200,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 17,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 26, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3543),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 26, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2783),
                             FirstName = "john17",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -207,8 +209,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 18,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 28, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3549),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 28, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2786),
                             FirstName = "john18",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -216,8 +218,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 19,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 4, 30, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3552),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 4, 30, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2792),
                             FirstName = "john19",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -225,8 +227,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 20,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 2, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3555),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 2, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2795),
                             FirstName = "john20",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -234,8 +236,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 21,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 4, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3558),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 4, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2798),
                             FirstName = "john21",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -243,8 +245,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 22,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 6, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3561),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 6, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2801),
                             FirstName = "john22",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -252,8 +254,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 23,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 8, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3564),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 8, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2804),
                             FirstName = "john23",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -261,8 +263,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 24,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 10, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3570),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 10, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2810),
                             FirstName = "john24",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -270,8 +272,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 25,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 12, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3573),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 12, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2813),
                             FirstName = "john25",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -279,8 +281,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 26,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 14, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3576),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 14, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2816),
                             FirstName = "john26",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -288,8 +290,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 27,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 16, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3579),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 16, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2819),
                             FirstName = "john27",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -297,8 +299,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 28,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 18, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3582),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 18, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2822),
                             FirstName = "john28",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -306,8 +308,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 29,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 20, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3585),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 20, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2828),
                             FirstName = "john29",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -315,8 +317,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 30,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 22, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3591),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 22, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2831),
                             FirstName = "john30",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -324,8 +326,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 31,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 24, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3594),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 24, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2925),
                             FirstName = "john31",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -333,8 +335,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 32,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 26, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3597),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 26, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2928),
                             FirstName = "john32",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -342,8 +344,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 33,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 28, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3600),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 28, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2934),
                             FirstName = "john33",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -351,8 +353,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 34,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 5, 30, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3606),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 5, 30, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2937),
                             FirstName = "john34",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -360,8 +362,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 35,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 1, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3609),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 1, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2943),
                             FirstName = "john35",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -369,8 +371,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 36,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 3, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3612),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 3, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2946),
                             FirstName = "john36",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -378,8 +380,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 37,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 5, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3615),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 5, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2949),
                             FirstName = "john37",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -387,8 +389,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 38,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 7, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3618),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 7, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2952),
                             FirstName = "john38",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -396,8 +398,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 39,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 9, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3621),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 9, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2955),
                             FirstName = "john39",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -405,8 +407,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 40,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 11, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3627),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 11, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2961),
                             FirstName = "john40",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -414,8 +416,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 41,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 13, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3630),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 13, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2964),
                             FirstName = "john41",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -423,8 +425,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 42,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 15, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3633),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 15, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2967),
                             FirstName = "john42",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -432,8 +434,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 43,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 17, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3636),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 17, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2970),
                             FirstName = "john43",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -441,8 +443,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 44,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 19, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3639),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 19, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2973),
                             FirstName = "john44",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -450,8 +452,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 45,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 21, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3642),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 21, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2979),
                             FirstName = "john45",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -459,8 +461,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 46,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 23, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3645),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 23, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2982),
                             FirstName = "john46",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -468,8 +470,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 47,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 25, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3651),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 25, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2985),
                             FirstName = "john47",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -477,8 +479,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 48,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 27, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3678),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 27, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2988),
                             FirstName = "john48",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -486,8 +488,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 49,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 6, 29, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3681),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 6, 29, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2991),
                             FirstName = "john49",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -495,8 +497,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 50,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 1, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3684),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 1, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(2997),
                             FirstName = "john50",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -504,8 +506,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 51,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 3, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3691),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 3, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3000),
                             FirstName = "john51",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -513,8 +515,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 52,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 5, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3694),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 5, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3003),
                             FirstName = "john52",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -522,8 +524,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 53,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 7, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3697),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 7, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3006),
                             FirstName = "john53",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -531,8 +533,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 54,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 9, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3700),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 9, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3009),
                             FirstName = "john54",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -540,8 +542,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 55,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 11, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3706),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 11, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3015),
                             FirstName = "john55",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -549,8 +551,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 56,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 13, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3709),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 13, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3019),
                             FirstName = "john56",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -558,8 +560,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 57,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 15, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3712),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 15, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3022),
                             FirstName = "john57",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -567,8 +569,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 58,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 17, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3715),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 17, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3025),
                             FirstName = "john58",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -576,8 +578,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 59,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 19, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3718),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 19, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3028),
                             FirstName = "john59",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -585,8 +587,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 60,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 21, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3724),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 21, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3031),
                             FirstName = "john60",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -594,8 +596,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 61,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 23, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3727),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 23, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3037),
                             FirstName = "john61",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -603,8 +605,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 62,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 25, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3730),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 25, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3040),
                             FirstName = "john62",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -612,8 +614,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 63,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 27, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3733),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 27, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3043),
                             FirstName = "john63",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -621,8 +623,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 64,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 29, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3739),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 29, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3046),
                             FirstName = "john64",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -630,8 +632,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 65,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 7, 31, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3742),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 7, 31, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3049),
                             FirstName = "john65",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -639,8 +641,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 66,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 2, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3748),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 2, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3091),
                             FirstName = "john66",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -648,8 +650,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 67,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 4, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3751),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 4, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3094),
                             FirstName = "john67",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -657,8 +659,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 68,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 6, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3754),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 6, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3097),
                             FirstName = "john68",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -666,8 +668,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 69,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 8, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3757),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 8, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3103),
                             FirstName = "john69",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -675,8 +677,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 70,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 10, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3763),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 10, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3106),
                             FirstName = "john70",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -684,8 +686,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 71,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 12, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3766),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 12, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3109),
                             FirstName = "john71",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -693,8 +695,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 72,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 14, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3769),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 14, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3112),
                             FirstName = "john72",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -702,8 +704,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 73,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 16, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3772),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 16, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3115),
                             FirstName = "john73",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -711,8 +713,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 74,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 18, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3778),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 18, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3121),
                             FirstName = "john74",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -720,8 +722,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 75,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 20, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3781),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 20, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3124),
                             FirstName = "john75",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -729,8 +731,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 76,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 22, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3784),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 22, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3127),
                             FirstName = "john76",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -738,8 +740,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 77,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 24, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3787),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 24, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3130),
                             FirstName = "john77",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -747,8 +749,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 78,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 26, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3790),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 26, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3133),
                             FirstName = "john78",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -756,8 +758,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 79,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 28, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3796),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 28, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3139),
                             FirstName = "john79",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -765,8 +767,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 80,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 8, 30, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3799),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 8, 30, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3142),
                             FirstName = "john80",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -774,8 +776,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 81,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 1, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3802),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 1, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3145),
                             FirstName = "john81",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -783,8 +785,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 82,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 3, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3805),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 3, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3148),
                             FirstName = "john82",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -792,8 +794,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 83,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 5, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3811),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 5, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3151),
                             FirstName = "john83",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -801,8 +803,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 84,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 7, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3814),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 7, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3154),
                             FirstName = "john84",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -810,8 +812,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 85,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 9, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3817),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 9, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3160),
                             FirstName = "john85",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -819,8 +821,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 86,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 11, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3847),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 11, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3163),
                             FirstName = "john86",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -828,8 +830,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 87,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 13, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3850),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 13, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3166),
                             FirstName = "john87",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -837,8 +839,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 88,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 15, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3853),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 15, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3169),
                             FirstName = "john88",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -846,8 +848,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 89,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 17, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3860),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 17, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3172),
                             FirstName = "john89",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -855,8 +857,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 90,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 19, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3863),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 19, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3178),
                             FirstName = "john90",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -864,8 +866,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 91,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 21, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3866),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 21, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3181),
                             FirstName = "john91",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -873,8 +875,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 92,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 23, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3869),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 23, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3184),
                             FirstName = "john92",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -882,8 +884,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 93,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 25, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3875),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 25, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3187),
                             FirstName = "john93",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -891,8 +893,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 94,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 27, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3878),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 27, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3190),
                             FirstName = "john94",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -900,8 +902,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 95,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 9, 29, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3881),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 9, 29, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3194),
                             FirstName = "john95",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -909,8 +911,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 96,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 10, 1, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3884),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 10, 1, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3200),
                             FirstName = "john96",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -918,8 +920,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 97,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 10, 3, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3890),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 10, 3, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3203),
                             FirstName = "john97",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -927,8 +929,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 98,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 10, 5, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3893),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 10, 5, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3206),
                             FirstName = "john98",
                             LastName = "doe",
                             Username = "NameyNamey1"
@@ -936,8 +938,8 @@ namespace Blazor_Blog.Migrations
                         new
                         {
                             UserId = 99,
-                            Active = true,
-                            CreatedAt = new DateTime(2020, 10, 7, 16, 6, 2, 514, DateTimeKind.Local).AddTicks(3896),
+                            Active = false,
+                            CreatedAt = new DateTime(2020, 10, 7, 15, 33, 48, 608, DateTimeKind.Local).AddTicks(3209),
                             FirstName = "john99",
                             LastName = "doe",
                             Username = "NameyNamey1"

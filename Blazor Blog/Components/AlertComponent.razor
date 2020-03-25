@@ -1,15 +1,11 @@
 ﻿@if (IsVisible)
 {
-    if (IsValid)
-    {
-        <div role="alert" class="alert alert-success">
+
+        <div role="alert" class="alert flex justify-content-sm-between @(IsValid?"alert-success" : "alert-danger" )">
             <span class="font-weight-bold">@ChildContent </span>
+            <a href="#" @onclick:preventDefault @onclick="OnClickClose"><span class="oi oi-circle-x"></span></a>
         </div>
-    }else{
-        <div role="alert" class="alert alert-danger">
-            <span class="font-weight-bold">@ChildContent </span>
-        </div>
-    }
+
 }
 
 @code {
@@ -21,4 +17,9 @@
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+
+    private void OnClickClose()
+    {
+        IsVisible = false;
+    }
 }
