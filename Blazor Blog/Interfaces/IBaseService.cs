@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 
 namespace Blazor_Blog.Interfaces
 {
-    interface IUserService<T>
+    interface IBaseService<T>
     {
         Task<List<T>> GetAllUsers(Expression<Func<T, bool>> predicate, 
                                  Expression<Func<T, object>> includes, 
-                                 Expression<Func<T, object>> orderBy);
+                                 Expression<Func<T, object>> orderBy,
+                                 bool ascending);
         Task<T> GetUserById(int id);
         Task<T> AddUser(T newUser);
         Task<bool> RemoveUserAsync(T oldUser);

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Blazor_Blog.Services
 {
-    public class BaseService<T> : IUserService<T> where T : class
+    public class BaseService<T> : IBaseService<T> where T : class
     {
         private readonly AppDBContext _context;
         private DbSet<T> _table;
@@ -33,7 +33,8 @@ namespace Blazor_Blog.Services
 
         public async Task<List<T>> GetAllUsers(Expression<Func<T, bool>> filter = null, 
                                                 Expression<Func<T, object>> includes = null,
-                                                Expression<Func<T, object>> orderBy = null)
+                                                Expression<Func<T, object>> orderBy = null,
+                                                bool ascending = true)
         {
             var query = _table.AsQueryable();
             if(filter != null)
@@ -48,7 +49,10 @@ namespace Blazor_Blog.Services
 
             if(orderBy != null)
             { 
-              query = query.OrderByDescending(orderBy);
+                if(ascending)
+                    query = query.OrderBy(orderBy);
+                else
+                    query = query.OrderByDescending(orderBy);
             }
 
             return await query.AsNoTracking().ToListAsync();

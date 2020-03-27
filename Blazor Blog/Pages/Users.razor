@@ -63,7 +63,7 @@
     protected override async Task OnInitializedAsync()
     {
         var users = await Task.Run(() => Service.GetAllUsers());
-        FullUserList = UserList = users.ToList().OrderByDescending(x => x.CreatedAt).ToList();
+         UserList = users.ToList().OrderByDescending(x => x.CreatedAt).ToList();
     }
 
     private async Task OnRemoveUserAsync(MouseEventArgs e, User user)
